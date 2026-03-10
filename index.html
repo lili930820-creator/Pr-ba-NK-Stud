@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NK Studio | Virtuális asszisztencia és AOC rendszer bevezetés</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header {
+      padding: 25px 0;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1e293b;
+      font-weight: 500;
+    }
+
+    .hero {
+      padding: 100px 0;
+      background: linear-gradient(120deg, #f1f5f9, #e2e8f0);
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 26px;
+      background: #2563eb;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .aoc {
+      background: #0f172a;
+      color: white;
+    }
+
+    .aoc p {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .team {
+      text-align: center;
+    }
+
+    .team-member {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .cta {
+      text-align: center;
+      background: #2563eb;
+      color: white;
+      padding: 80px 20px;
+    }
+
+    .cta h2 {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #cbd5f5;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">NK Studio</div>
+        <ul>
+          <li><a href="#services">Szolgáltatások</a></li>
+          <li><a href="#aoc">AOC rendszer</a></li>
+          <li><a href="#team">Rólunk</a></li>
+          <li><a href="#contact">Kapcsolat</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Hatékonyabb működés vállalkozásoknak</h1>
+      <p>
+        Az NK Studio virtuális asszisztenciával és az AOC rendszer bevezetésével segíti a kis- és középvállalkozásokat abban, hogy átláthatóbb, szervezettebb és hatékonyabb működést építsenek.
+      </p>
+      <a class="btn" href="#contact">Kapcsolatfelvétel</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Miben segítünk?</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Projektmenedzsment támogatás</h3>
+          <p>
+            Segítünk strukturálni a projekteket, kezelni a feladatokat és koordinálni a folyamatokat, hogy a vállalkozás fókuszálni tudjon a növekedésre.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Virtuális asszisztencia</h3>
+          <p>
+            Adminisztrációs, szervezési és operatív feladatok átvállalása, amelyek időt szabadítanak fel a vezetők számára.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Folyamatoptimalizálás</h3>
+          <p>
+            Segítünk feltérképezni a működési folyamatokat és hatékonyabb rendszert kialakítani a mindennapi működéshez.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title">Szolgáltatásaink</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Adminisztratív támogatás</h3>
+          <p>Email kezelés, időpont egyeztetés, dokumentumok rendszerezése.</p>
+        </div>
+        <div class="card">
+          <h3>Projekt koordináció</h3>
+          <p>Feladatkezelés, csapat koordináció és határidők nyomon követése.</p>
+        </div>
+        <div class="card">
+          <h3>Üzleti folyamatok kialakítása</h3>
+          <p>Strukturált működés kialakítása a vállalkozás stabil növekedéséhez.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="aoc" class="section aoc">
+    <div class="container">
+      <h2 class="section-title">AOC System Partner</h2>
+      <p>
+        Az NK Studio hivatalos AOC System partnerként segíti a vállalkozásokat egy olyan működési rendszer kialakításában, amely támogatja az időgazdálkodást, az átlátható folyamatokat és az összehangolt belső működést.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Időgazdálkodás</h3>
+          <p>Strukturált napi működés.</p>
+        </div>
+        <div class="card">
+          <h3>Átlátható folyamatok</h3>
+          <p>Világos munkafolyamatok.</p>
+        </div>
+        <div class="card">
+          <h3>Hatékony csapatmunka</h3>
+          <p>Összehangolt működés a szervezeten belül.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="section">
+    <div class="container">
+      <h2 class="section-title">A vállalkozás vezetői</h2>
+      <div class="grid team">
+        <div class="team-member">
+          <h3>Kárpáti Lili</h3>
+          <p>Vállalkozásvezető</p>
+        </div>
+        <div class="team-member">
+          <h3>Nagy Gyula</h3>
+          <p>Vállalkozásvezető</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="cta">
+    <h2>Beszéljünk a vállalkozásod fejlődéséről</h2>
+    <p>Vedd fel velünk a kapcsolatot és nézzük meg hogyan tudunk segíteni.</p>
+    <br>
+    <a class="btn" href="mailto:info@nkstudio.hu">Kapcsolatfelvétel</a>
+  </section>
+
+  <footer>
+    <p>© 2026 NK Studio | Minden jog fenntartva</p>
+  </footer>
+</body>
+</html>
