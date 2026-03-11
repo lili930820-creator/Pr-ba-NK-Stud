@@ -23,14 +23,14 @@ background:#f8fafc;
 color:#0f172a;
 }
 
-/* NAVBAR */
+/* NAV */
 
 header{
 position:fixed;
 top:0;
 width:100%;
 background:white;
-box-shadow:0 5px 30px rgba(0,0,0,0.05);
+box-shadow:0 5px 25px rgba(0,0,0,0.05);
 z-index:1000;
 }
 
@@ -53,9 +53,9 @@ font-weight:700;
 }
 
 nav ul{
-list-style:none;
 display:flex;
 gap:30px;
+list-style:none;
 }
 
 nav a{
@@ -87,23 +87,35 @@ margin-bottom:30px;
 
 .btn{
 display:inline-block;
-padding:16px 30px;
+padding:15px 28px;
 background:#2563eb;
 color:white;
 border-radius:10px;
-font-weight:600;
 text-decoration:none;
-transition:0.3s;
+font-weight:600;
 }
 
-.btn:hover{
-transform:translateY(-3px);
-}
+/* SECTION WITH BACKGROUND */
 
-/* SECTION */
-
-.section{
+.section-bg{
+position:relative;
 padding:110px 0;
+background-size:cover;
+background-position:center;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.9);
+}
+
+.section-content{
+position:relative;
+z-index:2;
 }
 
 .section-title{
@@ -125,11 +137,6 @@ background:white;
 padding:35px;
 border-radius:14px;
 box-shadow:0 15px 40px rgba(0,0,0,0.05);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
 }
 
 /* PROCESS */
@@ -153,87 +160,48 @@ font-weight:700;
 margin-bottom:10px;
 }
 
-/* AOC */
-
-.aoc{
-background:#0f172a;
-color:white;
-}
-
-.aoc .card{
-background:#1e293b;
-color:white;
-}
-
-/* TESTIMONIAL */
-
-.testimonial{
-background:#f1f5f9;
-padding:40px;
-border-radius:12px;
-max-width:700px;
-margin:auto;
-text-align:center;
-}
-
-/* PRICING */
-
-.pricing{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-.price-card{
-background:white;
-padding:40px;
-border-radius:14px;
-box-shadow:0 10px 40px rgba(0,0,0,0.05);
-text-align:center;
-}
-
-.price{
-font-size:40px;
-font-weight:700;
-margin:20px 0;
-}
-
-/* TEAM */
-
-.member{
-background:white;
-padding:35px;
-border-radius:12px;
-text-align:center;
-box-shadow:0 10px 40px rgba(0,0,0,0.05);
-}
-
 /* CONTACT */
 
 .contact{
 background:#2563eb;
 color:white;
+padding:100px 20px;
 text-align:center;
-padding:110px 20px;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+max-width:900px;
+margin:auto;
+margin-top:40px;
+}
+
+.person{
+background:rgba(255,255,255,0.1);
+padding:25px;
+border-radius:10px;
 }
 
 form{
+margin-top:40px;
 max-width:500px;
-margin:auto;
-margin-top:30px;
+margin-left:auto;
+margin-right:auto;
 display:flex;
 flex-direction:column;
 gap:15px;
 }
 
 input,textarea{
-padding:15px;
-border-radius:8px;
+padding:14px;
 border:none;
+border-radius:8px;
 }
 
 button{
-padding:15px;
+padding:14px;
 border:none;
 border-radius:8px;
 background:#0f172a;
@@ -248,7 +216,7 @@ footer{
 background:#020617;
 color:#cbd5f5;
 text-align:center;
-padding:35px;
+padding:30px;
 }
 
 </style>
@@ -270,7 +238,6 @@ padding:35px;
 <li><a href="#services">Szolgáltatások</a></li>
 <li><a href="#aoc">AOC rendszer</a></li>
 <li><a href="#process">Működés</a></li>
-<li><a href="#pricing">Csomagok</a></li>
 <li><a href="#contact">Kapcsolat</a></li>
 </ul>
 
@@ -286,7 +253,7 @@ padding:35px;
 <h1>Hatékony rendszerek vállalkozásoknak</h1>
 
 <p>
-Virtuális asszisztencia és az AOC rendszer segítségével strukturáltabb, átláthatóbb és hatékonyabb működést építünk vállalkozásoknak.
+Virtuális asszisztencia és az AOC rendszer segítségével strukturáltabb és átláthatóbb működést építünk vállalkozásoknak.
 </p>
 
 <a class="btn" href="#contact">Ingyenes konzultáció</a>
@@ -294,9 +261,13 @@ Virtuális asszisztencia és az AOC rendszer segítségével strukturáltabb, á
 </section>
 
 
-<section id="services" class="section">
+<!-- SZOLGÁLTATÁSOK -->
 
-<div class="container">
+<section id="services" class="section-bg" style="background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978');">
+
+<div class="overlay"></div>
+
+<div class="container section-content">
 
 <h2 class="section-title">Szolgáltatásaink</h2>
 
@@ -304,17 +275,17 @@ Virtuális asszisztencia és az AOC rendszer segítségével strukturáltabb, á
 
 <div class="card">
 <h3>Virtuális asszisztencia</h3>
-<p>Adminisztráció, szervezés, napi operatív támogatás.</p>
+<p>Adminisztratív és operatív támogatás vállalkozások számára.</p>
 </div>
 
 <div class="card">
 <h3>Projektmenedzsment</h3>
-<p>Projektek koordinációja és strukturálása.</p>
+<p>Feladatok és projektek koordinálása.</p>
 </div>
 
 <div class="card">
 <h3>Folyamatoptimalizálás</h3>
-<p>Hatékonyabb működési struktúra kialakítása.</p>
+<p>Hatékonyabb működési rendszer kialakítása.</p>
 </div>
 
 </div>
@@ -324,17 +295,21 @@ Virtuális asszisztencia és az AOC rendszer segítségével strukturáltabb, á
 </section>
 
 
-<section id="aoc" class="section aoc">
+<!-- AOC -->
 
-<div class="container">
+<section id="aoc" class="section-bg" style="background-image:url('https://images.unsplash.com/photo-1551281044-8cbe0f3c4c39');">
 
-<h2 class="section-title">AOC rendszer</h2>
+<div class="overlay"></div>
+
+<div class="container section-content">
+
+<h2 class="section-title">AOC rendszer bevezetés</h2>
 
 <div class="grid">
 
 <div class="card">
 <h3>Időgazdálkodás</h3>
-<p>Strukturált munkavégzés.</p>
+<p>Strukturált napi működés.</p>
 </div>
 
 <div class="card">
@@ -354,9 +329,13 @@ Virtuális asszisztencia és az AOC rendszer segítségével strukturáltabb, á
 </section>
 
 
-<section id="process" class="section">
+<!-- PROCESS -->
 
-<div class="container">
+<section id="process" class="section-bg" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40');">
+
+<div class="overlay"></div>
+
+<div class="container section-content">
 
 <h2 class="section-title">Hogyan dolgozunk</h2>
 
@@ -365,25 +344,25 @@ Virtuális asszisztencia és az AOC rendszer segítségével strukturáltabb, á
 <div class="step">
 <div class="step-number">1</div>
 <h4>Elemzés</h4>
-<p>Megvizsgáljuk a jelenlegi működést.</p>
+<p>A működés feltérképezése.</p>
 </div>
 
 <div class="step">
 <div class="step-number">2</div>
 <h4>Stratégia</h4>
-<p>Kialakítjuk a rendszert.</p>
+<p>A rendszer megtervezése.</p>
 </div>
 
 <div class="step">
 <div class="step-number">3</div>
 <h4>Bevezetés</h4>
-<p>Implementáljuk az AOC rendszert.</p>
+<p>Az AOC implementálása.</p>
 </div>
 
 <div class="step">
 <div class="step-number">4</div>
 <h4>Támogatás</h4>
-<p>Segítjük a stabil működést.</p>
+<p>Stabil működés biztosítása.</p>
 </div>
 
 </div>
@@ -393,61 +372,30 @@ Virtuális asszisztencia és az AOC rendszer segítségével strukturáltabb, á
 </section>
 
 
-<section class="section">
-
-<div class="container">
-
-<h2 class="section-title">Ügyfél visszajelzés</h2>
-
-<div class="testimonial">
-
-<p>
-„Az NK Studio segítségével végre rendszert tudtunk építeni a vállalkozásunkban.”
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section id="pricing" class="section">
-
-<div class="container">
-
-<h2 class="section-title">Csomagok</h2>
-
-<div class="pricing">
-
-<div class="price-card">
-<h3>Start</h3>
-<div class="price">—</div>
-<p>Kisebb vállalkozásoknak</p>
-</div>
-
-<div class="price-card">
-<h3>Business</h3>
-<div class="price">—</div>
-<p>Komplex működési támogatás</p>
-</div>
-
-<div class="price-card">
-<h3>Pro</h3>
-<div class="price">—</div>
-<p>AOC rendszer teljes bevezetése</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
+<!-- CONTACT -->
 
 <section id="contact" class="contact">
 
-<h2>Kérj konzultációt</h2>
+<h2>Kapcsolat</h2>
+
+<p>Beszéljünk arról, hogyan tudjuk hatékonyabbá tenni a vállalkozásod működését.</p>
+
+<div class="contact-grid">
+
+<div class="person">
+<h3>Kárpáti Lili</h3>
+<p>Társalapító</p>
+<p>Email: lili@nkstudio.hu</p>
+</div>
+
+<div class="person">
+<h3>Nagy Gyula</h3>
+<p>Társalapító</p>
+<p>Email: gyula@nkstudio.hu</p>
+</div>
+
+</div>
+
 
 <form>
 
